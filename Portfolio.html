@@ -1,218 +1,627 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Varshini | My Portfolio</title>
+
     <style>
-        footer{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-            background-color: black;
-            color: lightgrey;
-            height: 150px;
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #252b45;
+            line-height: 1.7;
         }
-        header h1{
-            margin: 0;
+
+        /* Navigation */
+        nav {
+            background: #171d3b;
+            padding: 16px 7%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        input{
-            border: 2px solid lightgray;
-            border-radius: 3px;
-            height:25px;
-        }
-        .button{
-            height: 40px;
-            width: 140px;
-            border: none;
-            border-radius: 25px;
-            color:grey;
-        }
-        .button:hover{
-            background-color: darkblue;
-            cursor: pointer;
-        }
-        body{
-            margin: 0;
-        }
-        h1{
-            color: #2196f3;
-            font-size: 40px;
-        }
-        header h1{
+
+        .logo {
             color: white;
-            
+            font-size: 23px;
+            font-weight: bold;
         }
-        header{
-            background-color: #2196f3;
-            height: 100vh;
-            color:white;
-            border: 1px solid grey;
-            margin-bottom: 25px;
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a5b4fc;
+        }
+
+        /* Hero section */
+        #home {
+            min-height: 85vh;
+            padding: 80px 8%;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        div{
             text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #171d3b, #5145cd, #818cf8);
         }
-        .c2{
-            height: 100vh;
-            border: 1px solid grey;
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content .intro {
+            color: #dbeafe;
+            font-size: 18px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(36px, 6vw, 58px);
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero-content h1 span {
+            color: #c4b5fd;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #5145cd;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px #11182735;
+        }
+
+        /* Common section styles */
+        section.content-section {
+            padding: 75px 8%;
+            scroll-margin-top: 75px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            color: #252b63;
+            margin-bottom: 12px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #667085;
+            max-width: 650px;
+            margin: 0 auto 38px;
+        }
+
+        /* About */
+        #about {
+            background: white;
+        }
+
+        .about-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 32px;
+            background: #f5f7ff;
+            border-radius: 18px;
+            border-left: 5px solid #6558dc;
+        }
+
+        .about-card h3 {
+            color: #5145cd;
+            margin-bottom: 12px;
+        }
+
+        .about-card p {
+            margin-bottom: 12px;
+        }
+
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 5px 18px #252b450a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px #252b4518;
+        }
+
+        .project-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            color: #5145cd;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #667085;
+        }
+
+        .project-tag {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 5px 12px;
             border-radius: 20px;
-            margin-bottom: 25px;
+            background: #ede9fe;
+            color: #5145cd;
+            font-size: 13px;
         }
-        main{
-            padding: 20px;
-            background-color: #f0f8ff;
+
+        /* Skills */
+        #skills {
+            background: white;
         }
-        *{
-            text-align: center;
-            font-family:monospace ;
-            font-weight: 600;
-            font-size:15px ;
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
         }
-        .submit{
-            height: 40px;
-            width: 100px;
+
+        .skill {
+            padding: 14px 24px;
+            border-radius: 12px;
+            background: #f0edff;
+            color: #5145cd;
+            font-weight: bold;
+            border: 1px solid #ded8ff;
+        }
+
+        /* Contact */
+        #contact {
+            background: #f0edff;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px #252b4510;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d0d5dd;
+            border-radius: 9px;
+            font: inherit;
+            text-align: left;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: 2px solid #a5b4fc;
+            border-color: #6558dc;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
             border: none;
-            border-radius: 15px;
-            color:grey;
-            background-color: #2196f3;
-        }
-        .submit:hover{
-            background-color: darkblue;
+            background: #5145cd;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
         }
-        #projects{
-            height: 100vh;
-            border: 1px solid grey;
-            border-radius: 20px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .c4{
-            color: cadetblue;
-        }
-        .up{
-            background-image: url('background.jpg');
-        }
-        img {
-            border: 1px solid black;
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .skills{
-            height: 100vh;
-            border: 1px solid grey;
-            border-radius: 20px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        table,
-    th,
-    td {
-        border: 1.5px solid palevioletred;
-    }
-    #contact{
-        height: 100vh;
-        border: 1px solid grey;
-        border-radius: 20px;
-        display: flex;
-            align-items: center;
-            justify-content: center;
-    }
-        
 
+        .submit-btn:hover {
+            background: #3730a3;
+        }
+
+        #form-message {
+            margin-top: 15px;
+            color: #3730a3;
+            overflow-wrap: anywhere;
+        }
+
+        /* Footer */
+        footer {
+            background: #171d3b;
+            color: #e5e7eb;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+        
+/* About section profile photo */
+        .profile-photo {
+            display: block;
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #6558dc;
+            margin: 0 auto 20px;
+            box-shadow: 0 6px 18px #252b4520;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            #home {
+                min-height: 75vh;
+                padding: 55px 6%;
+            }
+
+            section.content-section {
+                padding: 55px 6%;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .about-card,
+            .contact-box {
+                padding: 22px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <section id="section1">
-    <div>
-    <header>
-    <h1>Welcome to my Portfolio</h1><br>
-    <button class="button">About</button>
-    <button class="button">Skills</button>
-    <button class="button">Projects</button>
-    <button class="button">Contact me</button>
-   </section>
-    </div>
-</header>
-<main>
-    <section id="skills" class="c2">
-    <h1>My Profile</h1><br>
-    <img src="Me.jpg" width=315 height="400" class="up">
-        <br>
-        <h3>P.Varshini</h3>
-        <p>I am Varshini <br>
-        I am a student,
-    Currently purcieving B.Tech in <em>Mlrit College(HYD)</em></p><br></section>
-    <section id="projects" class="class1">
-        <h1>My Projects</h1>
-       <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-    </style>
-            <table style="width:100%" >
-        <tr>
-            <th>Projects</th>
-            <th>Description</th>
-        </tr>
-        <tr>
-            <td>Portfolio</td>
-            <td>I have created my own portfolio</td>
-        </tr>
-        <tr>
-            <td>Calculator</td>
-            <td>I have craeted a simple calculator</td>
-        </tr>
-    </table>
-    </section>
-    <section class="skills">
-     <h1>My Skills</h1>
-    <ol id="ol">
-       <h4> <em><p>Python</p>
-       <p>C</p>
-       <p> Html</p></h4></em>
-    </ol></section>
-    <section id="contact">
-         <form action>
-        <h1 class="c1">Contact Me</h1>
-        <label for "name">Name:
-        </label>
-        <input type="text">
-        <br>
-        <label for "email">EMail:</label>
-        <input type="text"><br>
-        <input type="radio" id="male" value="male">
-        <label for="male">Male</label><br>
-         <input type="radio" id="female" value="female">
-        <label for="female">Female</label><br>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Varshini.</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <header id="home">
+        <div class="hero-content">
+            <p class="intro">Hello! Welcome to my portfolio</p>
+
+            <h1>Hi, I'm <span>P. Varshini</span></h1>
+
+            <p>
+                A B.Tech student passionate about technology,
+                programming and building creative web projects.
+            </p>
+
+            <a href="#projects" class="btn btn-primary">
+                Explore My Projects
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- About -->
+        <section id="about" class="content-section">
+            <h2 class="section-title">About Me</h2>
+
+            <p class="section-description">
+                Get to know more about my background and interests.
+            </p>
+
+            
+        <div class="about-card">
+            <img
+                src="Me.jpg"
+                alt="Profile photo of Varshini"
+                class="profile-photo"
+            >
+
+            <h3>My Profile</h3>
+
+
+                <p>
+                    Hello! I'm <strong>P. Varshini</strong>, a B.Tech
+                    student at MLR Institute of Technology in Hyderabad.
+                </p>
+
+                <p>
+                    I am interested in programming, web development
+                    and learning new technologies. I enjoy practising
+                    coding and creating projects that help me improve
+                    my technical skills.
+                </p>
+
+                <p>
+                    My goal is to keep learning, gain practical
+                    experience and build useful digital solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="content-section">
+            <h2 class="section-title">My Projects</h2>
+
+            <p class="section-description">
+                A selection of projects I have created while learning
+                programming and web development.
+            </p>
+
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <div class="project-icon">🌐</div>
+                    <h3>Personal Portfolio</h3>
+
+                    <p>
+                        A personal website presenting my profile,
+                        skills, projects and contact information
+                        using HTML and CSS.
+                    </p>
+
+                    <span class="project-tag">HTML & CSS</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">🧮</div>
+                    <h3>Simple Calculator</h3>
+
+                    <p>
+                        A calculator project designed to practise
+                        arithmetic operations and programming logic.
+                    </p>
+
+                    <span class="project-tag">Programming</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-icon">💙</div>
+                    <h3>NGO Awareness Website</h3>
+
+                    <p>
+                        An awareness webpage highlighting NGO
+                        initiatives, social impact and opportunities
+                        for people to get involved.
+                    </p>
+
+                    <span class="project-tag">Web Development</span>
+                </article>
+                
+            <article class="project-card">
+                <div class="project-icon">🛡️</div>
+
+                <h3>Women Safety Hotspot Map</h3>
+
+                <p>
+                    A women-safety-focused mapping concept designed
+                    for women travelling alone at night. It aims to
+                    display safer zones, highlight potentially
+                    restricted or flagged areas, and provide alerts
+                    when a user enters a flagged zone.
+                </p>
+
+                <span class="project-tag">HTML, CSS & JavaScript</span>
+            </article>
+
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="content-section">
+            <h2 class="section-title">My Skills</h2>
+
+            <p class="section-description">
+                Technologies and programming languages I am
+                learning and practising.
+            </p>
+
+            <div class="skills-container">
+                <div class="skill">🐍 Python</div>
+                <div class="skill">💻 C Programming</div>
+                <div class="skill">🌐 HTML</div>
+                <div class="skill">🎨 CSS</div>
+                <div class="skill">⚡ JavaScript</div>
+                <div class="skill">🔧 Git & GitHub</div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="content-section">
+            <h2 class="section-title">Contact Me</h2>
+
+            <p class="section-description">
+                Have a question or want to connect? Send me a message.
+            </p>
+
+            <div class="contact-box">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email *</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Write your message here..."
+                            maxlength="500"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Prepare Email →
+                    </button>
+
+                    <p id="form-message" role="status"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>P. Varshini | My Portfolio</strong></p>
+        <p>Learning today, building for tomorrow. ✨</p>
+        <p>© <span id="year"></span> Varshini. All rights reserved.</p>
+    </footer>
+
+    <script>
         
-        <b>Select Your Interests</b><br>
-        <input type="checkbox" id="Coding" value="Reading" class="c4">
-        <label for="coding">Coding</label> <br>
-        <input type="checkbox" id="Reading" value="coding">
-        <label for="Reading">Reading</label> <br>
-        <label for="bio">Bio(up to 200 characters):</label>
-     <input type="text">
-     <br>
-        <a href=""><button class="submit">Submit</button></a>
-    </form>
-    </section>
-</main>
-<footer>
-   <p>My Portfoloio </p>
-</footer>
-        </body>
-        <br>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        
+        document.getElementById("contact-form").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+                const status = document.getElementById("form-message");
+
+                if (!name || !email || !message) {
+                    status.textContent = "Please complete all required fields.";
+                    return;
+                }
+
+                const subject = encodeURIComponent(
+                    "Portfolio enquiry from " + name
+                );
+
+                const body = encodeURIComponent(
+                    "Name: " + name + "\n" +
+                    "Email: " + email + "\n\n" +
+                    "Message:\n" + message
+                );
+
+                status.textContent =
+                    "Your email application will open. Review and send your message there.";
+
+                
+                window.location.href =
+                    "mailto:pasupulavarshini@gmail.com?subject=" +
+                    subject + "&body=" + body;
+            }
+        );
+    </script>
+
 </body>
 </html>
