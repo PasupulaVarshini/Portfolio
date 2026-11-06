@@ -1240,3 +1240,198 @@ button:focus-visible {
         transform: none;
     }
 }
+
+/* =====================================
+   FINAL THEME: BURGUNDY + BLUSH + BLACK
+===================================== */
+
+:root {
+    --ink: #FFF5F5;
+    --muted: #C9B3BC;
+    --paper: #21151D;
+    --white: #30202A;
+    --purple: #B94E69;
+    --purple-dark: #A63E5A;
+    --cyan: #F1A9B8;
+    --orange: #E8A0A8;
+    --line: #49303B;
+    --shadow: 0 15px 40px rgba(0,0,0,.28);
+}
+
+body {
+    background: #21151D !important;
+    color: #FFF5F5 !important;
+}
+
+/* Header */
+.site-header {
+    background: rgba(33,21,29,.96) !important;
+    border-bottom: 1px solid #49303B !important;
+}
+
+/* Logo */
+.brand {
+    color: #FFF5F5 !important;
+}
+
+.brand-mark {
+    background: linear-gradient(135deg,#B94E69,#F1A9B8) !important;
+    color: #21151D !important;
+}
+
+.brand-dot {
+    color: #F1A9B8 !important;
+}
+
+/* All navigation buttons */
+.nav-links a,
+.nav-links a.nav-cta {
+    background: #30202A !important;
+    color: #FFF5F5 !important;
+    border: 1px solid #49303B !important;
+}
+
+.nav-links a:hover,
+.nav-links a.nav-cta:hover {
+    background: #B94E69 !important;
+    color: #FFFFFF !important;
+    border-color: #B94E69 !important;
+}
+
+/* Only active page */
+.nav-links a.active,
+.nav-links a.nav-cta.active {
+    background: #F1A9B8 !important;
+    color: #21151D !important;
+    border-color: #F1A9B8 !important;
+}
+
+/* Headings */
+.page-hero h1,
+.hero h1 {
+    color: #FFF5F5 !important;
+}
+
+.gradient-text {
+    background: linear-gradient(100deg,#F1A9B8,#B94E69) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+
+.eyebrow,
+.meta {
+    color: #F1A9B8 !important;
+}
+
+/* Cards */
+.content-card,
+.feature-card,
+.stat-card,
+.contact-detail,
+.profile-link {
+    background: #30202A !important;
+    color: #FFF5F5 !important;
+    border: 1px solid #49303B !important;
+}
+
+.content-card p,
+.content-card li,
+.feature-card p,
+.stat-card span {
+    color: #C9B3BC !important;
+}
+
+.content-card h2,
+.feature-card h3,
+.contact-detail strong {
+    color: #FFF5F5 !important;
+}
+
+.content-card h3,
+.contact-detail small {
+    color: #F1A9B8 !important;
+}
+
+.content-card:hover,
+.feature-card:hover,
+.profile-link:hover {
+    border-color: #B94E69 !important;
+    box-shadow: 0 15px 35px rgba(185,78,105,.16);
+}
+
+/* Statistics */
+.stat-card strong {
+    color: #F1A9B8 !important;
+}
+
+/* Buttons */
+.button-primary {
+    background: #B94E69 !important;
+    color: white !important;
+}
+
+.button-primary:hover {
+    background: #D16B85 !important;
+}
+
+.button-secondary {
+    background: #30202A !important;
+    color: #FFF5F5 !important;
+    border-color: #49303B !important;
+}
+
+/* Skills */
+.tag-list span {
+    background: #49303B !important;
+    color: #F1A9B8 !important;
+    border: 1px solid #65404F;
+}
+
+/* Links */
+.text-link,
+.back-link {
+    color: #F1A9B8 !important;
+}
+
+.social-row {
+    color: #C9B3BC !important;
+}
+
+/* Hero visual */
+.avatar-card {
+    background: linear-gradient(145deg,#692C42,#B94E69,#F1A9B8) !important;
+}
+
+/* Contact */
+.contact-panel {
+    background: linear-gradient(145deg,#692C42,#B94E69) !important;
+}
+
+.contact-panel p {
+    color: #FFF5F5 !important;
+}
+
+/* CTA */
+.cta-band {
+    background: linear-gradient(110deg,#492333,#82364F,#B94E69) !important;
+}
+
+/* Footer */
+.site-footer {
+    border-color: #49303B !important;
+    color: #C9B3BC !important;
+}
+
+.site-footer b {
+    color: #F1A9B8 !important;
+}
+
+/* Mobile navigation */
+@media (max-width:850px) {
+    .nav-links {
+        background: #21151D !important;
+        border: 1px solid #49303B !important;
+    }
+}
+
