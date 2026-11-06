@@ -1435,3 +1435,56 @@ body {
     }
 }
 
+/* PURE ROSE PINK COLOR CORRECTION */
+
+:root {
+    --cyan: #FF8FAB;
+    --orange: #FF8FAB;
+}
+
+.brand-mark {
+    background: linear-gradient(135deg, #B94E69, #FF8FAB) !important;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        100deg,
+        #FF8FAB,
+        #FFB3C6
+    ) !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+
+.nav-links a.active,
+.nav-links a.nav-cta.active {
+    background: #FF8FAB !important;
+    color: #21151D !important;
+    border-color: #FF8FAB !important;
+}
+
+.nav-links a:hover {
+    background: #FF8FAB !important;
+    color: #21151D !important;
+    border-color: #FF8FAB !important;
+}
+
+.eyebrow,
+.meta,
+.text-link,
+.back-link,
+.stat-card strong,
+.content-card h3 {
+    color: #FF8FAB !important;
+}
+
+.tag-list span {
+    color: #FF8FAB !important;
+    background: #49303B !important;
+}
+
+.site-footer b {
+    color: #FF8FAB !important;
+}
+
