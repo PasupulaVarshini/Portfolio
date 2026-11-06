@@ -34,10 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Automatically highlight current navigation page
-    const currentPage = window.location.pathname
-        .split("/")
-        .filter(Boolean)
-        .pop() || "index.html";
+    const path = window.location.pathname;
+
+const currentPage = path.endsWith("/")
+    ? "index.html"
+    : path.split("/").pop() || "index.html";
 
     document.querySelectorAll(".nav-links a").forEach(link => {
         const linkPage = link.getAttribute("href")
